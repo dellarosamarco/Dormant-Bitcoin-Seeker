@@ -28,3 +28,7 @@
 /home/runner/Dormant-Bitcoin-Seeker-1/obj/Debug/netcoreapp6.0/ref/main.dll
 /home/runner/Dormant-Bitcoin-Seeker-1/obj/Debug/netcoreapp6.0/main.pdb
 /home/runner/Dormant-Bitcoin-Seeker-1/obj/Debug/netcoreapp6.0/main.genruntimeconfig.cache
+/home/runner/Dormant-Bitcoin-Seeker-1/bin/Debug/netcoreapp6.0/Microsoft.Extensions.Logging.Abstractions.dll
+/home/runner/Dormant-Bitcoin-Seeker-1/bin/Debug/netcoreapp6.0/NBitcoin.dll
+/home/runner/Dormant-Bitcoin-Seeker-1/bin/Debug/netcoreapp6.0/Newtonsoft.Json.dll
+/home/runner/Dormant-Bitcoin-Seeker-1/obj/Debug/netcoreapp6.0/main.csproj.CopyComplete

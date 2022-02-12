@@ -1,8 +1,9 @@
 using System;
+using NBitcoin;
 
 class Program {
     public static void Main () 
     {
-        Console.WriteLine(Bitcoin.randomPrivateKey());
+        BitcoinWallet wallet = new BitcoinWallet(); 
     }
 }

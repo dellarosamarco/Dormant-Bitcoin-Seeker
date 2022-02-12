@@ -6,4 +6,8 @@
 		<StartupObject>Program</StartupObject>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NBitcoin" Version="6.0.19" />
+  </ItemGroup>
+
 </Project>
