@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 is_global = true
 build_property.TargetFramework = netcoreapp6.0
 build_property.TargetPlatformMinVersion = 
@@ -8,3 +9,15 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = main
 build_property.ProjectDir = C:\Users\marco\Desktop\Dormant-Bitcoin-Seeker-1\
+=======
+is_global = true
+build_property.TargetFramework = netcoreapp6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = main
+build_property.ProjectDir = /home/runner/Dormant-Bitcoin-Seeker-1/
+>>>>>>> 0ffdb51f91a27b2220acc10498a8e6e3ee0bd072
