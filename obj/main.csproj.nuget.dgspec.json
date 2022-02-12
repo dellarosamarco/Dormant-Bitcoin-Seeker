@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marco\\Desktop\\Dormant-Bitcoin-Seeker-1\\main.csproj": {}
+    "C:\\Users\\marco\\Desktop\\Dormant Bitcoin Seeker C#\\main.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marco\\Desktop\\Dormant-Bitcoin-Seeker-1\\main.csproj": {
+    "C:\\Users\\marco\\Desktop\\Dormant Bitcoin Seeker C#\\main.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marco\\Desktop\\Dormant-Bitcoin-Seeker-1\\main.csproj",
+        "projectUniqueName": "C:\\Users\\marco\\Desktop\\Dormant Bitcoin Seeker C#\\main.csproj",
         "projectName": "main",
-        "projectPath": "C:\\Users\\marco\\Desktop\\Dormant-Bitcoin-Seeker-1\\main.csproj",
+        "projectPath": "C:\\Users\\marco\\Desktop\\Dormant Bitcoin Seeker C#\\main.csproj",
         "packagesPath": "C:\\Users\\marco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marco\\Desktop\\Dormant-Bitcoin-Seeker-1\\obj\\",
+        "outputPath": "C:\\Users\\marco\\Desktop\\Dormant Bitcoin Seeker C#\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
