@@ -2,10 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
+using System.Threading.Tasks;
 
 public static class BlockchainRequestPool{
     private static string base_url = "https://blockchain.info/balance?cors=true&active=";
     private static int maxChunkSize = 125;
+    private static int apiLimit = 10000;
+    private static int waitingRequests = 0;
 
     public static bool isEmpty{
         get {
@@ -21,7 +24,17 @@ public static class BlockchainRequestPool{
         }
     }
 
-    public static float getPoolBalance(){
+    public static async Task request(){
+        if(waitingRequests == 0){
+            getPoolBalance();
+        }
+        else{
+            await wait();
+        }
+    }
+
+    public static float? getPoolBalance(){
+        waitingRequests+=1;
         if(isEmpty)
             throw new NullReferenceException("The pool is empty.");
 
@@ -63,9 +76,18 @@ public static class BlockchainRequestPool{
             }
         }
         else {
-            Console.WriteLine(chunkBalance + " BTC => Chunk size : " + chunkSize);
+            Console.WriteLine(chunkBalance + " BTC => Total wallets : " + chunkSize);
         }
 
         return chunkBalance;
+    }
+
+    public static async Task wait(){
+        await Task.Run(() =>
+        {
+            Task.Delay(apiLimit * waitingRequests).Wait();
+            waitingRequests -= 1;
+            getPoolBalance();
+        });
     }
 }

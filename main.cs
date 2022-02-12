@@ -10,10 +10,16 @@ class Program {
         // Console.WriteLine(wallet.privateKey);
         // Console.WriteLine(wallet.balance);
 
-        BlockchainRequestPool.pool(125);
+        Init();
+        Console.ReadLine();
+    }
 
-        while(BlockchainRequestPool.isEmpty == false){
-            BlockchainRequestPool.getPoolBalance();
-        }
+    public static async void Init(){
+        BlockchainRequestPool.pool(500);
+
+        await BlockchainRequestPool.request();
+        await BlockchainRequestPool.request();
+        await BlockchainRequestPool.request();
+        await BlockchainRequestPool.request();
     }
 }
