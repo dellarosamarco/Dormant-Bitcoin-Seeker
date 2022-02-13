@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 public static class BlockchainRequestPool{
     private static string base_url = "https://blockchain.info/balance?cors=true&active=";
     private static int maxChunkSize = 125;
-    private static int apiLimit = 10000;
-    private static int waitingRequests = 0;
+    private static int apiLimit = 1000;
+    private static int _waitingRequests = 0;
+    public static int waitingRequests{
+        get { return _waitingRequests; }
+        private set { _waitingRequests = value; }
+    }
 
     public static bool isEmpty{
         get {

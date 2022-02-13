@@ -17,9 +17,12 @@ class Program {
     public static async void Init(){
         BlockchainRequestPool.pool(500);
 
-        await BlockchainRequestPool.request();
-        await BlockchainRequestPool.request();
-        await BlockchainRequestPool.request();
-        await BlockchainRequestPool.request();
+        while(BlockchainRequestPool.isEmpty == false){
+            if(BlockchainRequestPool.waitingRequests <= 1){
+                await BlockchainRequestPool.request();
+            }
+        }
+
+        Console.WriteLine("Finished");
     }
 }
