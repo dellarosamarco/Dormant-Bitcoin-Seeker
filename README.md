@@ -30,7 +30,7 @@ class Program {
     public static void Main () {
         wallet = new BitcoinWallet();
         
-        //WIF private key
+        //Private key
         Console.WriteLine(wallet.privateKey); //L4uWyjckCyJzcYfirEUMYDsLycAkW3Kir3ps9WCjTGbLmNX95UMR
         
         //Public key
