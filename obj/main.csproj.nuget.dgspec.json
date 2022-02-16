@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marco\\Desktop\\Dormant Bitcoin Seeker C#\\main.csproj": {}
+    "/home/runner/Dormant-Bitcoin-Seeker-1/main.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marco\\Desktop\\Dormant Bitcoin Seeker C#\\main.csproj": {
+    "/home/runner/Dormant-Bitcoin-Seeker-1/main.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marco\\Desktop\\Dormant Bitcoin Seeker C#\\main.csproj",
+        "projectUniqueName": "/home/runner/Dormant-Bitcoin-Seeker-1/main.csproj",
         "projectName": "main",
-        "projectPath": "C:\\Users\\marco\\Desktop\\Dormant Bitcoin Seeker C#\\main.csproj",
-        "packagesPath": "C:\\Users\\marco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marco\\Desktop\\Dormant Bitcoin Seeker C#\\obj\\",
+        "projectPath": "/home/runner/Dormant-Bitcoin-Seeker-1/main.csproj",
+        "packagesPath": "/home/runner/.nuget/packages/",
+        "outputPath": "/home/runner/Dormant-Bitcoin-Seeker-1/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\marco\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/home/runner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -64,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/nix/store/knphr82kmbrymkmwv8dl86i37xbvg67z-dotnet-sdk-6.0.100/sdk/6.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

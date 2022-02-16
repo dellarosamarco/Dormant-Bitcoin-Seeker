@@ -26,10 +26,11 @@ public class BitcoinWallet
         private set { _address = value; }
     }
 
-    private float? _balance = null;
-    public float? balance{
+    private bool balanceSet = false;
+    private float _balance = 0;
+    public float balance{
         get { 
-            if(_balance == null) {
+            if(balanceSet == false) {
                 getBalance();
             }
             return _balance; 
@@ -47,7 +48,7 @@ public class BitcoinWallet
         //Console.WriteLine(publicKey.GetAddress(ScriptPubKeyType.Legacy,Network.TestNet));
     }
 
-    private void getBalance(){        
+    private float getBalance(){        
         using (var client = new HttpClient())
         {
             var response = client.GetAsync(base_url + address).GetAwaiter().GetResult();
@@ -55,10 +56,13 @@ public class BitcoinWallet
             {
                 var responseContent = response.Content;
                 balance = float.Parse(JObject.Parse(responseContent.ReadAsStringAsync().GetAwaiter().GetResult())[address]["final_balance"].ToString());
+                balanceSet = true;
             }
             else{
-                balance = 0;
+                throw new NullReferenceException("Too many requests.");
             }
         }
+
+        return balance;
     }
 }

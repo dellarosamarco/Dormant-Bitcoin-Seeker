@@ -28,19 +28,22 @@ public static class BlockchainRequestPool{
         }
     }
 
-    public static async Task request(){
+    public static async Task<float> request(){
         if(waitingRequests == 0){
-            getPoolBalance();
+            return getPoolBalance();
         }
         else{
-            await wait();
+            return await wait();
         }
     }
 
-    public static float? getPoolBalance(){
+    public static float getPoolBalance(){
         waitingRequests+=1;
-        if(isEmpty)
-            throw new NullReferenceException("The pool is empty.");
+        if(isEmpty){
+            Console.WriteLine("The pool is empty.");
+            return 0;
+        }
+        
 
         string requestUrl = base_url;
         List<BitcoinWallet> chunk = new List<BitcoinWallet>();
@@ -78,6 +81,8 @@ public static class BlockchainRequestPool{
             for(int i=0;i<chunk.Count;i++){
                 Console.WriteLine(chunk[i].privateKey);
             }
+
+            Console.WriteLine(chunkBalance + " BTC => Total wallets : " + chunkSize);
         }
         else {
             Console.WriteLine(chunkBalance + " BTC => Total wallets : " + chunkSize);
@@ -86,12 +91,13 @@ public static class BlockchainRequestPool{
         return chunkBalance;
     }
 
-    public static async Task wait(){
+    public static async Task<float> wait(){
         await Task.Run(() =>
         {
             Task.Delay(apiLimit * waitingRequests).Wait();
             waitingRequests -= 1;
-            getPoolBalance();
+            return getPoolBalance();
         });
+        return 0;
     }
 }
