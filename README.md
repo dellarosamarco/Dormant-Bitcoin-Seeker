@@ -1,5 +1,26 @@
 # Dormant Bitcoin Seeker
 
+#### Generate a wallet
+```c#
+class Program {
+    public static void Main () {
+        wallet = new BitcoinWallet();
+        
+        //Private key
+        Console.WriteLine(wallet.privateKey); //L4uWyjckCyJzcYfirEUMYDsLycAkW3Kir3ps9WCjTGbLmNX95UMR
+        
+        //Public key
+        Console.WriteLine(wallet.publicKey); //e55703d16ad6eec5fcbfaad3972f3ff4788c01b3d0fcf838a766b0847166ec0a
+        
+        //Address
+        Console.WriteLine(wallet.address); //1ELRYmZKSjtMnbBfmDx8Un4h6LMx6dPuTy
+        
+        //Balance
+        Console.WriteLine(wallet.balance); //0 BTC
+    }
+}
+```
+
 #### Create a bitcoin wallet pool
 ```c#
 class Program {
@@ -20,27 +41,6 @@ class Program {
         }
 
         Console.WriteLine("Finished");
-    }
-}
-```
-
-#### Generate a single wallet
-```c#
-class Program {
-    public static void Main () {
-        wallet = new BitcoinWallet();
-        
-        //Private key
-        Console.WriteLine(wallet.privateKey); //L4uWyjckCyJzcYfirEUMYDsLycAkW3Kir3ps9WCjTGbLmNX95UMR
-        
-        //Public key
-        Console.WriteLine(wallet.publicKey); //e55703d16ad6eec5fcbfaad3972f3ff4788c01b3d0fcf838a766b0847166ec0a
-        
-        //Address
-        Console.WriteLine(wallet.address); //1ELRYmZKSjtMnbBfmDx8Un4h6LMx6dPuTy
-        
-        //Balance
-        Console.WriteLine(wallet.balance); //0 BTC
     }
 }
 ```
